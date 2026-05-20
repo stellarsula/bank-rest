@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    com.bank: DEBUG
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  liquibase:
+    change-log: classpath:db/migration/changelog-root.yaml
+    enabled: true
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
